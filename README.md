@@ -1,7 +1,7 @@
-### 0. Create a function named CreateStore which returns a null object 
+### 0. Create a function named CreateStore which has two parameters, and returns a null object 
 
 ```javascript
-const createStore = reducer => {
+const createStore = (reducer, initValue) => {
     return {
       
     };
@@ -73,4 +73,4 @@ const createStore = (reducer = () => {}, initValue = {}) => {
 };
 ```
 ----------
-*You can refer to this [whole code](./src/2.md).*
+*You can refer to [this file](./src/2.md) with whole code.*

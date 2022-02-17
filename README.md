@@ -75,4 +75,4 @@ const createStore = (reducer = () => {}, initValue = {}) => {
 };
 ```
 ----------
-*You can refer to [this file](./src/2.md) with whole code.*
+## *You can refer to [this file](./src/2.md) with whole code.*

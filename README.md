@@ -1,6 +1,6 @@
 # This artile is to explain how to design a simple redux step by step.
 
-### 0. Create a function named CreateStore which has two parameters and returns a null object 
+### Step0. Create a function named CreateStore which has two parameters and returns a null object 
 
 ```javascript
 const createStore = (reducer, initValue) => {
@@ -10,7 +10,7 @@ const createStore = (reducer, initValue) => {
 };
 ```
 
-### 1.Add interfaces such as store.getState/store.dispatch/store.subscribe to this object 
+### Step1.Add interfaces such as store.getState/store.dispatch/store.subscribe to this object 
 
 ```javascript
 const createStore = (reducer, initValue) => {
@@ -25,7 +25,7 @@ const createStore = (reducer, initValue) => {
 };
 ```
 
-### 2. Realize the getState interface
+### Step2. Realize the getState interface
 
 ```javascript
 const createStore = (reducer = () => {}, initValue = {}) => {
@@ -38,7 +38,7 @@ const createStore = (reducer = () => {}, initValue = {}) => {
 ```
 
 
-### 2. Realize the dispatch interface
+### Step3. Realize the dispatch interface
 
 ```javascript
 const createStore = (reducer = () => {}, initValue = {}) => {
@@ -52,7 +52,7 @@ const createStore = (reducer = () => {}, initValue = {}) => {
 };
 ```
 
-### 3. Realize the subscribe interface
+### Step4. Realize the subscribe interface
 
 ```javascript
 const createStore = (reducer = () => {}, initValue = {}) => {

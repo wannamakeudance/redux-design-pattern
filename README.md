@@ -1,4 +1,6 @@
-### 0. Create a function named CreateStore which has two parameters, and returns a null object 
+This artile is to explain how to design a simple redux step by step.
+
+### 0. Create a function named CreateStore which has two parameters and returns a null object 
 
 ```javascript
 const createStore = (reducer, initValue) => {

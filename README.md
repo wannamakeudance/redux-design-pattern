@@ -73,4 +73,4 @@ const createStore = reducer => {
 };
 ```
 ----------
-You can refer to this [whole code](./2.md).
+*You can refer to this [whole code](./src/2.md).*

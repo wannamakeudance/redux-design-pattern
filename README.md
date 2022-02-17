@@ -11,7 +11,7 @@ const createStore = reducer => {
 ### 1.Add interfaces such as store.getState/store.dispatch/store.subscribe to this object 
 
 ```javascript
-const createStore = reducer => {
+const createStore = (reducer, initValue) => {
     const getState = () => {};
     const dispatch = () => {};
     const subscribe = () => {};
@@ -26,8 +26,8 @@ const createStore = reducer => {
 ### 2. Realize the getState interface
 
 ```javascript
-const createStore = reducer => {
-    let _store;
+const createStore = (reducer = () => {}, initValue = {}) => {
+    let _store = initValue;
     const getState = () => {
         return _store;
     };
@@ -39,8 +39,8 @@ const createStore = reducer => {
 ### 2. Realize the dispatch interface
 
 ```javascript
-const createStore = reducer => {
-    let _store;
+const createStore = (reducer = () => {}, initValue = {}) => {
+    let _store = initValue;
     ...
     const dispatch = action => {
         // Change the _store through reducer function which you define outside the whole createStore
@@ -53,8 +53,8 @@ const createStore = reducer => {
 ### 3. Realize the subscribe interface
 
 ```javascript
-const createStore = reducer => {
-    let _store;
+const createStore = (reducer = () => {}, initValue = {}) => {
+    let _store = initValue;
     let _storeListeners = [];
     ...
 

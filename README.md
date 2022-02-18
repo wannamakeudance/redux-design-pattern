@@ -74,5 +74,32 @@ const createStore = (reducer = () => {}, initValue = {}) => {
     ...
 };
 ```
+### Step5. Realize the unsubscribe function
+
+```javascript
+const createStore = (reducer = () => {}, initValue = {}) => {
+    let _store = initValue;
+    let _storeListeners = [];
+    ...
+
+    const dispatch = action => {
+        _store = reducer(_store, action);
+        // When dispatch an action, the listener function will execute.
+        _storeListeners.forEach(listener => {
+            listener();
+        });
+    };
+
+    const subscribe = listener => {
+        _storeListeners.push(listener);
+        // to unsubscribe this listener
+        return () => {
+            const index = _storeListeners.indexOf(listener);
+            _storeListeners.splice(index, 1);
+        }
+    };
+    ...
+};
+```
 ----------
 ## *You can refer to [this file](./src/2.md) with whole code.*

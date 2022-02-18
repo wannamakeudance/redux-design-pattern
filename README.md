@@ -78,18 +78,7 @@ const createStore = (reducer = () => {}, initValue = {}) => {
 
 ```javascript
 const createStore = (reducer = () => {}, initValue = {}) => {
-    let _store = initValue;
-    let _storeListeners = [];
     ...
-
-    const dispatch = action => {
-        _store = reducer(_store, action);
-        // When dispatch an action, the listener function will execute.
-        _storeListeners.forEach(listener => {
-            listener();
-        });
-    };
-
     const subscribe = listener => {
         _storeListeners.push(listener);
         // to unsubscribe this listener

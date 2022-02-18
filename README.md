@@ -79,6 +79,7 @@ const createStore = (reducer = () => {}, initValue = {}) => {
 ```javascript
 const createStore = (reducer = () => {}, initValue = {}) => {
     ...
+    
     const subscribe = listener => {
         _storeListeners.push(listener);
         // to unsubscribe this listener

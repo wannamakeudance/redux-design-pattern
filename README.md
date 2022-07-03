@@ -91,5 +91,11 @@ const createStore = (reducer = () => {}, initValue = {}) => {
     ...
 };
 ```
+
+### Conclusion
+
+In my opinion, the implementation of redux has involved two major design patterns: **Singleton Pattern and Observer Pattern.**
+Furthermore, the whole unique store is the practice of `Software Closure`.
+
 ----------
 ## *You can refer to [this file](./src/2.md) with whole code.*
